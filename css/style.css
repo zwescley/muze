@@ -3,12 +3,12 @@
 :root {
     --padrao: rgb(56, 55, 55);
     --vinho: #610536;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --border: .2rem solid rgba(0, 0, 0, .1);
     --white: #fff;
-    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+    --text-shadow: 0 1.5rem 3rem rgba(255, 255, 255, 0.3);
     --box-shadow2: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    --light-black: #777;
+    --light: #dfdfdf;
 }
 
 * {
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    background: #eee;
+    background: var(--light);
 }
 
 /* section {
@@ -56,78 +56,125 @@ body {
     box-shadow: var(--box-shadow);
 }
 
+.heading2 span {
+    font-size: 220px;
+}
+
+.heading2 .viagem {
+    position: absolute;
+    top: 190px;
+    left: 120px;
+    background: rgba(255, 255, 255, 0.952);
+    padding: 5em;
+    width: 56em;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+}
+
 .heading2 h1 {
-    margin-bottom: 1em;
-    opacity: 50%;
-    font-size: 10rem;
-    text-transform: uppercase;
-    color: var(--white);
-    text-shadow: var(--text-shadow);
+    text-align: center;
+    color: var(--vinho);
+    opacity: 90%;
+    font-size: 4em;
 }
 
 .viajar{
+    color: var(--vinho);
     width: 100%;
-    border: solid 0.1px black;
-    margin: 13px 7px;
+    border: none;
+    margin: 5px 2px;
     padding: 17px;
     font-size: 17px;
     border-radius: 2px;
-}
-
-.texto img{
-    height: 340px;
-    width: 100%;
-    border-radius: 2px;
+    background: white;
     box-shadow: var(--box-shadow);
 }
 
+.img{
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: var(--box-shadow);
+}
+
+.texto{
+    align-items: center;
+    text-align: center;
+}
+
 .texto h1{
-    font-size: 30px;
+    font-size: 40px;
     margin: 16px;
+    margin-top: 20%;
+    color: var(--vinho);
+
 }
 
 .texto p{
-    font-size: 18px;
-    text-align: justify;
-    padding: 0px 10px;
+    font-size: 24px;
+    padding: 10px 10px;
 }
 
-.section{
-    width: 800px;
-    margin: auto;
+.saiba{
+    text-align: end;
+    text-decoration: none;
+    color: var(--vinho);
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 
-.section  span {
-    color: var(--padrao);
-    font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 20px;
+.saiba:hover {
+    color: #52052e;
+    transform: scale(1.1);
 }
 
-
-.heading span {
-    background: var(--padrao);
-    color: #fff;
-    display: inline-block;
-    padding: .5rem 3rem;
-    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+.saiba:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px var(--vinho);
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
 }
+
+.saiba:hover:after {
+    transform: scaleX(1);
+}
+
 
 .btn1 {
     margin-top: 1rem;
     padding: .8rem 3rem;
     font-size: 1.7rem;
     border-radius: .5rem;
-    border: .1rem solid var(--padrao);
-    color: var(--padrao);
+    border: .1rem solid var(--vinho);
+    color: var(--vinho);
     cursor: pointer;
     background: none;
-    margin-left: 14px;
+    margin: 8px;
 }
 
 .btn1:hover {
-    background: var(--padrao);
+    background: var(--vinho);
+    color: #eee;
+}
+
+.btn2 {
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .1rem solid var(--vinho);
     color: #fff;
+    cursor: pointer;
+    background: var(--vinho);
+    margin: 8px;
+}
+
+.btn2:hover {
+    background: none;
+    color: var(--vinho);
 }
 
 .header {
@@ -140,18 +187,19 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 9%;
-    background: #fff;
-    /* box-shadow: #61053688 0px 20px 15px -15px; */
+    background: rgb(247, 247, 247);
+    box-shadow: var(--box-shadow);
 }
 
 .header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
-    color: var(--padrao);
+    color: var(--vinho);
+    text-decoration: none;
 }
 
-.header .logo i {
-    color: var(--padrao);
+.header .logo:hover {
+    cursor: pointer;
 }
 
 .header .navbar a {
@@ -165,12 +213,13 @@ body {
 
 .header .navbar a:hover {
     color: var(--padrao);
+    transform: scale(1.1);
 }
 
 .header .navbar a:after {
     display: block;
     content: '';
-    border-bottom: solid 2px var(--padrao);
+    border-bottom: solid 2px var(--vinho);
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
 }
@@ -185,17 +234,20 @@ body {
     line-height: 4.5rem;
     border-radius: .5rem;
     background: #eee;
-    color: var(--padrao);
+    color: var(--vinho);
     font-size: 2rem;
     margin-left: .3rem;
     cursor: pointer;
     text-align: center;
+    border: solid .5px var(--vinho);
 }
 
 .header .icons div:hover {
-    background: #fff;
-    color: var(--padrao);
-    border: solid 1px var(--padrao);
+    background: var(--vinho);
+    color: #eee;
+    border: solid 1px #eee;
+    transform: scale(1.1);
+    font-size: 2.1rem;
 }
 
 #menu-btn {
@@ -246,11 +298,11 @@ body {
     position: absolute;
     top: 110%;
     right: -110%;
-    width: 35rem;
+    width: 40rem;
     box-shadow: var(--box-shadow);
-    padding: 2rem;
+    padding: 3.5rem;
     border-radius: .5rem;
-    background: rgba(255, 255, 255, 0.89);
+    background: rgb(255, 255, 255);
     text-align: center;
     border: solid .1em rgba(0, 0, 0, 0.459);
 }
@@ -263,7 +315,7 @@ body {
 .header .login-form h3 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    color: var(--padrao);
+    color: var(--vinho);
 }
 
 .header .login-form .box {
@@ -273,12 +325,13 @@ body {
     border-radius: .5rem;
     padding: 1rem;
     font-size: 1.6rem;
-    color: var(--padrao);
+    color: var(--vinho);
     text-transform: none;
 }
 
 ::placeholder {
-    color: var(--padrao);
+    color: var(--vinho);
+    padding: .2em;
 }
 
 .header .login-form p {
@@ -288,7 +341,7 @@ body {
 }
 
 .header .login-form p a {
-    color: #C20A6C;
+    color: var(--vinho);
     text-decoration: underline;
 }
 
@@ -367,7 +420,7 @@ body {
     text-align: center;
     margin: auto;
     font-size: 3em;
-    color: var(--padrao);
+    color: var(--vinho);
 }
 
 .footer .box i:hover{

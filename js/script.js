@@ -77,11 +77,3 @@ else {
     limpa_formulário_cep();
 }
 };
-
-function spinnerr(){
-    var spinner1 = `<div class="lds-ring"><div></div><div></div><div></div><div></div></div>`
-    var spinner = document.getElementById("spinner")
-    var spinner2 = document.getElementById("spinner2")
-    spinner.style.display = "none"
-    spinner2.innerHTML = "AGUARDANDO MOTORISTA" + spinner1
-}

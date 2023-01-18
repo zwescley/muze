@@ -37,14 +37,26 @@
             <input type="password" placeholder="Senha" class="box">
             <p>Esqueceu sua senha? <a href="#">clique aqui</a></p>
             <p>Não tem uma conta? <a href="#">crie agora</a></p>
-            <input type="submit" value="Entrar" class="btn">
+            <input type="button" value="Entrar" class="btn1">
+            
         </form>
     </header>
 
     <p style="margin-top: 80px;"></p>
 
     <div class="heading2" style="background:url(imagens/banner.jpg) no-repeat">
-        <h1>MUZE</h1>
+        <span>ㅤ</span>
+        <div class="viagem">
+            <h1>Faça uma viagem</h1> 
+            <h1>nesse momento<i style="margin-left: 10px;" class="fa-solid fa-car"></i></h1>
+            <p class="p-3"></p>
+            <input type="text" class="viajar" name="cep" onblur="pesquisacep(this.value);" maxlength="9" id="partida" size="10" placeholder="Informe local de partida ou CEP">
+            <input type="text" class="viajar" name="cep" onblur="pesquisacep(this.value);" maxlength="9" id="partida" size="10" placeholder="Informe local de destino ou CEP">
+            <p class="p-1"></p>
+            <input type="button" value="Chamar Motorista" onclick="spinnerr()" class="btn1">
+            <input type="button" value="Agendar Viagem" onclick="spinnerr()" class="btn2">
+        </div>
+
     </div>
 
     <p class="p-5"></p>
@@ -55,25 +67,15 @@
         <div class="container text-center">
             <div class="row">
                 
-                <div class="col-6">
-                    <p class="p-5"></p>
-                    <p class="p-3"></p>
-                    <input type="text" class="viajar" name="cep" onblur="pesquisacep(this.value);" maxlength="9" id="partida" size="10" placeholder="Informe local de partida ou CEP">
-                    <input type="text" class="viajar" name="cep" onblur="pesquisacep(this.value);" maxlength="9" id="partida" size="10" placeholder="Informe local de destino ou CEP">
-                    <input type="button" value="Chamar Motorista" onclick="spinnerr()" class="btn1">
-                    <p></p>
-                    <span id="spinner2" style="margin-left: 70px;"></span>
+                <div class="col-5">
+                    <img src="imagens/pexels-henry-altidor-6900594.jpg" class="img" alt="">
                 </div>
-                <div class="col-1">
-                    <span></span>
-                    <span style="border-right: ;"></span>
-                    <span></span>
-                </div>
-                <div class="col-5 texto">
-                    <img src="imagens/sessao.jpg" alt="">
-                    <h1>Ser uma Motorista</h1>
+                <div class="col-1"></div>
+                <div class="col-6 texto">
+                    
+                    <h1>Venha ser uma motorista e se sentir muito mais segura!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quibusdam amet dignissimos sed officia, eligendi quasi, eaque accusamus enim omnis temporibus alias esse assumenda dolorum velit laborum minus sunt maiores.</p>
-                    <input type="button" class="btn1" value="Cadastrar como Motorista">
+                    <a href="" class="saiba">ser uma motorista</a>
                 </div>
             </div>
         </div>
